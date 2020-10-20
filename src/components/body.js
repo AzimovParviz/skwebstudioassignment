@@ -16,14 +16,14 @@ function Body() {
             });
     };    
     useEffect(hook, []);
-
+    var ret = [];
+    for (var i=0;i<chars.length;i++)
+    {
+        ret.push(<Profile props={chars[i]}/>);
+    }
     return (
         <div className="flexbox-container">
-          <ul>
-            {chars.map(char => (<li>{char.name}</li>))}
-            {chars.map(char => (<li>{char.status}</li>))}
-            {chars.map(char => (<li>{char.species}</li>))}
-          </ul>
+          {ret}
         </div>
     );
 }
