@@ -29,10 +29,36 @@
 }
 
 .flexbox-container {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 
+.profile-card {
+    border: 3px solid green;
+}
+
+.profile-card:hover {
+    background-color: green;
+    border: 3px solid yellow;
+}
+
+.character-info {
+    list-style-type: none;    
+}
+
+.profile-item{
+    text-align: left;
+    flex-basis: 25%
+}
+
+.character-avatar {
+    float:left;
+    width: 75%;
+    height: 75%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
