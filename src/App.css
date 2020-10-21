@@ -32,12 +32,17 @@
     position: relative;
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start;
     justify-content: space-evenly;
 }
 
 .profile-card {
     border: 3px solid green;
+    border-radius: 25px;
+    max-height: 180px;
+    max-width: 400px;
+    align-self: auto;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .profile-card:hover {
@@ -46,18 +51,26 @@
 }
 
 .character-info {
-    list-style-type: none;    
+    list-style-type: none;
+    /* float: right; */
 }
 
 .profile-item{
-    text-align: left;
-    flex-basis: 25%
+    position: relative;
+    left: 120px;
+    bottom: 120px;
+    text-align: right;
+    font-size: 13px;
+    width: 50%;
+    flex: 1 0 200px;
 }
 
 .character-avatar {
-    float:left;
-    width: 75%;
-    height: 75%;
+    position: relative;
+    float: left;
+    right: 15px;
+    width: 69%;
+    height: 69%;
 }
 @keyframes App-logo-spin {
   from {
