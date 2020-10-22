@@ -1,10 +1,10 @@
 html{
     background-image: url("./bg.jpg");
-    background-attachment: fixed;
+    background-attachment: fixed;/*чтобы фон сайта оставался на месте когда скроллится сайт*/
 }
+
 .App {
     text-align: center;
-
     height:100%;
 }
 
@@ -19,6 +19,7 @@ html{
   }
 }
 
+/*хэдер сайта*/
 .App-header {
   background-color: #282c34;
   min-height: 10vh;
@@ -32,7 +33,7 @@ html{
 .App-link {
   color: #61dafb;
 }
-
+/*поисковое поле*/
 .search-bar {
     position: absolute;
     float: top;
@@ -41,7 +42,7 @@ html{
     top: -50px;
     left: 50px;
 }
-
+/*флексбокс для карточек персонажа*/
 .flexbox-container {
     position: relative;
     display: flex;
@@ -50,7 +51,7 @@ html{
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
-
+/*карточка персонажа*/
 .profile-card {
     border: 3px solid green;
     background-color: lightgreen;
@@ -66,12 +67,11 @@ html{
     background-color: green;
     border: 3px solid yellow;
 }
-
+/*стиль для ul элемента в компонетнте Profile*/
 .character-info {
     list-style-type: none;
-    /* float: right; */
 }
-
+/*та или иная характеристика персонажа(пол имя и тп)*/
 .profile-item{
     position: relative;
     left: 120px;
@@ -81,7 +81,7 @@ html{
     width: 50%;
     flex: 1 0 200px;
 }
-
+/* аватары персонажей */
 .character-avatar {
     position: relative;
     border-radius: 50%;
@@ -90,7 +90,7 @@ html{
     width: 69%;
     height: 69%;
 }
-
+/*статусы персонажа (жив, мертв, неизвестно)*/
 .Alive {
     color:green;
 }
@@ -102,7 +102,7 @@ html{
 .unknown {
     color:grey;
 }
-
+/*когда не найдено персонажей для запрошенного эпизода*/
 .NotFound {
     color: green;
 }

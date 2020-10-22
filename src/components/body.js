@@ -8,6 +8,7 @@ import NotFound from './notfound.js';
 function Body() {
     const [chars, setChars] = useState([]);
     const [term, setTerm] = useState("");
+    //делаем реквест к АПИ
     const hook = () => {
         console.log('effect');
         axios
@@ -19,23 +20,11 @@ function Body() {
             });
     };    
     useEffect(hook, []);
-    let episodeList = [];
-    useEffect(() => {
-        chars.forEach((char) => {
-            episodeList.push(char.episode);
-            console.log(episodeList);
-        });
-    }, [chars]);
-    // var newArray = chars.filter(function (el) {
-    //     return el.episode.includes("/episode/"+term);
-    // });
-
-    let newArray = [];
+    //ret - массив для профилей персонажей
     var ret = [];
     for (var i=0;i<chars.length;i++)
     {
-        console.log('character '+i+ 'forfucks skae: '+chars[i].episode);
-        console.log('search term is '+"https://rickandmortyapi.com/api/episode/"+term);
+        //проверяем, находится ли эпизод в профиле персонажа, т.к массив с эпизодами это ссылки на АПИ эпизодов, то ищем есть ли ссылка на запрошенный эпизод
         if (chars[i].episode.includes("https://rickandmortyapi.com/api/episode/"+term) || term=="")
         {
             ret.push(<Profile props={chars[i]}/>);
@@ -45,7 +34,7 @@ function Body() {
 
         }
     }
-    if (ret.length<1)
+    if (ret.length<1)//если не найден эпизод, то пушим в массив только компонент NotFound
     {
         ret.push(<NotFound/>);
     }

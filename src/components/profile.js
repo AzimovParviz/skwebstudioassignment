@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import '../App.css';
 
-function Profile (props) {    
+function Profile (props) {
+    //генерируем ключ для каждого персонажа
     var key = "#"+props.props.name.replace(/\s/g, "")+"ID"+props.props.id;
     return (
         <div className="profile-card">
