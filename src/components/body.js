@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../App.css';
 import Profile from './profile.js';
 import SearchBar from './searchbar.js';
+import NotFound from './notfound.js';
 
 function Body() {
     const [chars, setChars] = useState([]);
@@ -39,6 +40,14 @@ function Body() {
         {
             ret.push(<Profile props={chars[i]}/>);
         }
+        else
+        {
+
+        }
+    }
+    if (ret.length<1)
+    {
+        ret.push(<NotFound/>);
     }
     return (
         <div className="flexbox-container">
