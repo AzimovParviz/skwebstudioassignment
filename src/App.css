@@ -1,10 +1,12 @@
 .App {
-  text-align: center;
+    text-align: center;
+    background-image: url("./bg.jpg");
+    height:100%;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 20vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -37,8 +39,9 @@
 
 .profile-card {
     border: 3px solid green;
+    background-color: cyan;
     border-radius: 25px;
-    max-height: 180px;
+    max-height: 200px;
     max-width: 400px;
     align-self: auto;
     padding: 10px;
@@ -67,11 +70,25 @@
 
 .character-avatar {
     position: relative;
+    border-radius: 50%;
     float: left;
     right: 15px;
     width: 69%;
     height: 69%;
 }
+
+.Alive {
+    color:green;
+}
+
+.Dead {
+    color:red;
+}
+
+.unknown {
+    color:grey;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
