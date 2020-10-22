@@ -22,6 +22,7 @@ html{
 /*хэдер сайта*/
 .App-header {
     background-image: url("./header-bg.png");
+    filter: brightness(50%);
     background-attachment: fixed;
     min-height: 10vh;
     flex-direction: column;
