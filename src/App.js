@@ -11,7 +11,7 @@ function App() {
         <div className="App">
           <header className="App-header">
             <img src={pickle} className="App-logo" alt="logo" />
-            <p>
+            <p className="header-text">
               Le Rick and Morty Database
             </p>
           </header>

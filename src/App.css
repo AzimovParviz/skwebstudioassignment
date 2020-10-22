@@ -21,13 +21,19 @@ html{
 
 /*хэдер сайта*/
 .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-image: url("./header-bg.png");
+    background-attachment: fixed;
+    min-height: 10vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.header-text {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:greenx;
 }
 
 .App-link {
@@ -41,6 +47,10 @@ html{
     border-radius: 25px;
     top: -50px;
     left: 50px;
+}
+
+::placeholder {
+    color:red;
 }
 /*флексбокс для карточек персонажа*/
 .flexbox-container {
